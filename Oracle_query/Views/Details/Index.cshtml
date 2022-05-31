@@ -1,0 +1,43 @@
+﻿@model Oracle_query.Models.EMP
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Details</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        <b>@Html.DisplayNameFor(m => m.EMPNO):</b>
+        @Html.DisplayTextFor(m => m.EMPNO)
+    </p>
+
+    <p>
+        <b>@Html.DisplayNameFor(m => m.ENAME):</b> 
+        @Html.DisplayTextFor(m => m.ENAME)
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.JOB):</b> 
+        @Html.DisplayTextFor(m => m.JOB)
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.MGR):</b> 
+        @Html.DisplayTextFor(m => m.MGR)
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.HIREDATE):</b> 
+        @Html.DisplayTextFor(m => m.HIREDATE)
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.SAL):</b> 
+        @Html.DisplayTextFor(m => m.SAL)
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.COMM):</b> 
+        @Html.DisplayTextFor(m => m.COMM)
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.DEPTNO):</b> 
+        @Html.DisplayTextFor(m => m.DEPTNO)
+    </p>
+}

@@ -1,0 +1,39 @@
+﻿@model List<Oracle_query.Models.EMP>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employees</h2>
+<p>
+    <a href="@Url.Action("Index","AddEmployee")" class="btn btn-success"><i class="fas fa-user-plus"></i></a>
+</p>
+<table class="table">
+    <tr>
+        <th>EMPNO</th>
+        <th>ENAME</th>
+        <th>JOB</th>
+        <th>MGR</th>
+        <th>HIREDATE</th>
+        <th>SAL</th>
+        <th>COMM</th>
+        <th>DEPTNO</th>
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.EMPNO</td>
+            <td>@s.ENAME</td>
+            <td>@s.JOB</td>
+            <td>@s.MGR</td>
+            <td>@s.HIREDATE</td>
+            <td>@s.SAL</td>
+            <td>@s.COMM</td>
+            <td>@s.DEPTNO</td>
+            <td><a href="@Url.Action("Index","Details",new { id = @s.EMPNO })" class="btn btn-warning"><i class="fas fa-file"></i></a></td>
+            <td><a href="@Url.Action("Index","Edit",new { id = @s.EMPNO })" class="btn btn-info"><i class="fas fa-edit"></i></a></td>
+            <td><a href="@Url.Action("Index","Delete",new { id = @s.EMPNO })" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+           
+        </tr>
+    }
+
+</table>

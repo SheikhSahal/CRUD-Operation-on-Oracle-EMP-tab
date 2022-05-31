@@ -1,0 +1,48 @@
+﻿@model Oracle_query.Models.EMP
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    <p>
+        <b>@Html.DisplayNameFor(m => m.EMPNO):</b>
+        @Html.TextBoxFor(m => m.EMPNO, new { @readonly = true ,@class="form-control" })
+    </p>
+
+    <p>
+        <b>@Html.DisplayNameFor(m => m.ENAME):</b>
+        @Html.TextBoxFor(m => m.ENAME, new { @class = "form-control" })
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.JOB):</b>
+        @Html.TextBoxFor(m => m.JOB, new { @class = "form-control" })
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.MGR):</b>
+        @Html.TextBoxFor(m => m.MGR, new { @class = "form-control" })
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.HIREDATE):</b>
+        @Html.TextBoxFor(m => m.HIREDATE, new { @class = "form-control" })
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.SAL):</b>
+        @Html.TextBoxFor(m => m.SAL, new { @class = "form-control" })
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.COMM):</b>
+        @Html.TextBoxFor(m => m.COMM, new { @class = "form-control" })
+    </p>
+    <p>
+        <b>@Html.DisplayNameFor(m => m.DEPTNO):</b>
+        @Html.TextBoxFor(m => m.DEPTNO, new { @class = "form-control" })
+    </p>
+
+    <p>
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </p>
+}

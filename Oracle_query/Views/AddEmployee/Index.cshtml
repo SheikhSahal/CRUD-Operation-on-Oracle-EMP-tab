@@ -1,0 +1,59 @@
+﻿@model Oracle_query.Models.EMP
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@using (Html.BeginForm())
+{
+    <p>
+        EMPNO : @Html.TextBoxFor(m => m.EMPNO, new { @class = "form-control", @readonly = true })
+
+    </p>
+
+    <p>
+        ENAME : @Html.TextBoxFor(m => m.ENAME, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ENAME)
+    </p>
+    <p>
+        JOB : @Html.TextBoxFor(m => m.JOB, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.JOB)
+    </p>
+    <p>
+        MGR : @Html.TextBoxFor(m => m.MGR, new { @class = "form-control" })
+
+    </p>
+    <p>
+        HIREDATE : @Html.TextBoxFor(m => m.HIREDATE, new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(m => m.HIREDATE)
+    </p>
+    <p>
+        SAL : @Html.TextBoxFor(m => m.SAL, new { @class = "form-control" })
+        
+    </p>
+    <p>
+        COMM : @Html.TextBoxFor(m => m.COMM, new { @class = "form-control" })
+        
+    </p>
+    <p>
+        DEPTNO : @Html.DropDownListFor(m => m.DEPTNO, (IEnumerable<SelectListItem>)ViewBag.drop,"---Select---",new { @class = "form-control ",id="normalDropDown"})
+        
+    </p>
+
+    <p>
+        <input type="submit" value="Save" class="btn btn-success" />
+    </p>
+}
+
+@section scripts{
+<script>
+    $(function () {
+
+        $("normalDropDown").chosen();
+
+    });
+</script>
+
+}
